@@ -6,3 +6,9 @@ def home_view(request):
 
 def login_view(request):
     return render(request, 'homepage/login.html')  # หน้า Login
+
+def about_us_view(request):
+    return render(request, 'homepage/about_us.html') # หน้า About us
+
+def register_view(request):
+    return render(request, 'homepage/register.html') # หน้า About us
