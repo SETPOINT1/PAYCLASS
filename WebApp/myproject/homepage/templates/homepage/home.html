@@ -12,13 +12,15 @@
         <nav class="nav-bar">
             <div class="payclass">
                 <a href="{% url 'home' %}">
-                    <h2>PayClass</h2> 
+                    <h2>Logo</h2>
                 </a>    
             </div>
             
             <div class="menu">
-                <h3>คอร์สเรียน</h3>
-                <h3>เกี่ยวกับเรา</h3>
+                <h4>คอร์สเรียน</h4>
+                <h4>คอร์สเรียนของฉัน</h4>
+                <h4>รีวิวจากน้องๆ</h4>
+                <h4>เกี่ยวกับเรา</h4>
             </div>
             
             <div class="regis-buy">
@@ -27,7 +29,7 @@
                         <p>เข้าสู่ระบบ</p>
                     </a>
                 </div>
-                <button class="button">
+                <button class="cart">
                     <svg
                       class="icon"
                       stroke="currentColor"
@@ -51,9 +53,26 @@
         </nav>
 
         <div class="body-page">
-            <div class="ads"></div>
-            <div class="pic1"></div>
-            <div class="pic2"></div>
+            <div class="ads">
+                <div class="slide">
+                    <img src="../static/payclass/resource/table.jpg" alt="Image 1" class="active">
+                    <img src="../static/payclass/resource/luck.jpg" alt="Image 2">
+                    <img src="../static/payclass/resource/map.jpg" alt="Image 3">
+                    <div class="dots">
+                        <button class="dot active" data-index="0"></button>
+                        <button class="dot" data-index="1"></button>
+                        <button class="dot" data-index="2"></button>
+                    </div>                  
+                </div>
+            </div>
+            <h1>Dek 67</h1>
+            <div class="dek67">
+                <div class="tiao"></div>
+                <div class="phum"></div>
+                <div class="jenny"></div>
+                <div class="smart"></div>
+                <div class="mew"></div>
+            </div>
         </div>
 
         <footer>
@@ -240,5 +259,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="{% static 'payclass/js/script.js'%}"></script>
 </body>
 </html>
