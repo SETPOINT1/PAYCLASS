@@ -6,6 +6,14 @@
     <title>register</title>
 </head>
 <body>
-    
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Register</button>
+    <h2>หากมีบัญชี</h2>
+    <a href="{% url 'login' %}">login</a>
+</form>
+
 </body>
 </html>

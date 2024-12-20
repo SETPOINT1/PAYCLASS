@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="{% static 'payclass/css/style.css' %}">
 </head>
 <body>
-    <div class="allpage">
-        
-    </div>
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Login</button>
+    <h2>หากไม่มีบัญชี</h2>
+    <a href="{% url 'register' %}">register</a>
+</form>
+
 </body>
 </html>
