@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Syne', sans-serif;
+    font-family: "Roboto", serif;
 }
 
 body, html {
@@ -42,7 +41,7 @@ body, html {
     letter-spacing: 1px;
     padding: 0 10px;
     font-weight: 500;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 .payclass a h2{
@@ -52,13 +51,65 @@ body, html {
     width: 65px;
     height: 75px; */
     margin-left: 25px;
+    margin-right: 90px;
 } 
 
 .menu{
-    font-family: "Kanit", serif;
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.menu a:hover{
+    transform: translateY(-3px);
+}
+
+.menu a{
+    font-family: "Kanit", serif;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.dropdown > a {
+    cursor: pointer;
+}
+
+.dropdown > a::after {
+    content: ""; /* สร้างลูกศร */
+    display: inline-block;
+    margin-left: 8px;
+    width: 0;
+    height: 2px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000; /* สีของลูกศร */
+    opacity: 0.5;
+}
+
+/* เมนูย่อย */
+.dropdown-content {
+    display: none; /* ซ่อนเมนูตอนแรก */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* แสดง dropdown เมื่อ hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .regis-buy{
@@ -67,21 +118,25 @@ body, html {
     margin-right: 15px;
     justify-content: center;
     align-items: center;
-    gap: 5px;
 }
 
 .login-bar{
-    font-family: "Kanit", serif;
     display: flex;
     justify-content: center;
-    border: 2.8px solid black;
+    border: 2.19px solid black;
     border-radius: 15px;
     height: 30px;
+    width: 90px;
 }
 
-.login-bar a p{
+.login-bar p{
+    font-family: "Kanit", serif;
     font-size: 15px;
     font-weight: bold;
+}
+
+.login-bar:hover{
+    color: rgb(10, 8, 113);
 }
 
 .cart{
@@ -114,13 +169,12 @@ body, html {
 
 .ads {
     width: 100%;
-    margin: 0 auto;
-    position: relative;
+    background-color: #e2e2e2;
 }
 
 .slide {
     position: relative;
-    height: 400px;
+    height: 500px;
 }
 
 .slide img {
@@ -128,7 +182,7 @@ body, html {
     width: 100%;
     height: 100%;
     opacity: 0;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     top: 0;
     left: 0;
@@ -174,43 +228,29 @@ body, html {
 }
 
 .dek67{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1000px;
-    height: 750px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 235px;
+    height: 240px;
     margin-bottom: 30px;
 }
 
-.tiao,.phum,.jenny,
-.smart, .mew{
-    background-size: cover;
-    border-radius: 10px;
+.dek67 img{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    object-fit: contain;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 100%;
     height: 100%;
 }
 
-.tiao{
-    background-image: url('../resource/dek67-tiao.jpg');
+.dek67 img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.phum{
-    background-image: url('../resource/dek67-phum.jpg');
-}
-
-.jenny{
-    background-image: url('../resource/dek67-jenny.jpg');
-}
-
-.smart{
-    background-image: url('../resource/dek67-smart.jpg');
-}
-
-.mew{
-    background-image: url('../resource/dek67-mew.jpg');
-}
 
 footer{
     background-image: url('../resource/bg.jpg');
