@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>TheMathmatics</title>
     <link rel="stylesheet" href="{% static 'payclass/css/style.css' %}">
 </head>
 <body>
@@ -17,38 +17,48 @@
             </div>
             
             <div class="menu">
-                <h4>คอร์สเรียน</h4>
-                <h4>คอร์สเรียนของฉัน</h4>
-                <h4>รีวิวจากน้องๆ</h4>
-                <h4>เกี่ยวกับเรา</h4>
+                <div class="dropdown">
+                    <a href="#">คอร์สเรียน</a>
+                    <div class="dropdown-content">
+                      <a href="#">มัธยมต้น</a>
+                      <a href="#">มัธยมปลาย</a>
+                    </div>
+                </div>
+                <a href="#">คอร์สเรียนของฉัน</a>
+                <a href="#">รีวิว</a>
+                <a href="#">เกี่ยวกับเรา</a>
+                <a href="#">ติดต่อ</a>
             </div>
             
             <div class="regis-buy">
-                <div class="login-bar">
-                    <a href="{% url 'login' %}">
+                <a href="{% url 'login' %}">
+                    <div class="login-bar">
                         <p>เข้าสู่ระบบ</p>
-                    </a>
-                </div>
-                <button class="cart">
-                    <svg
-                      class="icon"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="9" cy="21" r="1"></circle>
-                      <circle cx="20" cy="21" r="1"></circle>
-                      <path
-                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-                      ></path>
-                    </svg>
-                </button>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <button class="cart">
+                        <svg
+                            class="icon"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path
+                                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                            ></path>
+                        </svg>
+                    </button>
+                </a>
             </div>
         </nav>
 
@@ -65,16 +75,23 @@
                     </div>                  
                 </div>
             </div>
+
             <h1>Dek 67</h1>
             <div class="dek67">
-                <div class="tiao"></div>
-                <div class="phum"></div>
-                <div class="jenny"></div>
-                <div class="smart"></div>
-                <div class="mew"></div>
+                <img src="../static/payclass/resource/dek67-jenny.jpg" alt="">
+                <img src="../static/payclass/resource/dek67-mew.jpg" alt="">
+                <img src="../static/payclass/resource/dek67-phum.jpg" alt="">
+                <img src="../static/payclass/resource/dek67-smart.jpg" alt="">
+                <img src="../static/payclass/resource/dek67-tiao.jpg" alt="">
+                <img src="../static/payclass/resource/dek67-nun.jpg" alt="">
             </div>
-        </div>
+        
+            <h1>Dek 66</h1>
+            <div class="dek66">
 
+            </div>
+        <div>
+            
         <footer>
             <div class="footer-all">
                 <div class="aboutus">
