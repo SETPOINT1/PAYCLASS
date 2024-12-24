@@ -22,10 +22,10 @@ body, html {
 }
 
 .nav-bar { 
+    background-color: #F8FAFC;
     display: flex;
     justify-content: space-between;
     color: black;
-    display: flex;
     align-items: center;
     object-fit: cover;
     height: 100px;
@@ -44,15 +44,15 @@ body, html {
     padding-bottom: 5px;
 }
 
-.payclass a h2{
-    /*  background-image: url('../resource/logo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 65px;
-    height: 75px; */
-    margin-left: 25px;
-    margin-right: 90px;
-} 
+.payclass{
+    margin-top: 15px;
+}
+
+.payclass img{
+    width: 150px;
+    height: 230px;
+    object-fit: cover;
+}
 
 .menu{
     display: flex;
@@ -123,7 +123,8 @@ body, html {
 .login-bar{
     display: flex;
     justify-content: center;
-    border: 2.19px solid black;
+    color: #474d55;
+    border: 2.19px solid #474d55;
     border-radius: 15px;
     height: 30px;
     width: 90px;
@@ -136,7 +137,7 @@ body, html {
 }
 
 .login-bar:hover{
-    color: rgb(10, 8, 113);
+    text-decoration: underline;
 }
 
 .cart{
@@ -149,7 +150,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: #474d55;
     transition: all ease-in-out 0.3s;
     cursor: pointer;
 }
@@ -169,7 +170,8 @@ body, html {
 
 .ads {
     width: 100%;
-    background-color: #e2e2e2;
+    background-color: #d8d4d4;
+    margin-bottom: 20px;
 }
 
 .slide {
@@ -226,31 +228,6 @@ body, html {
     margin-top: 20px;
     margin-bottom: 15px;
 }
-
-.dek67{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 235px;
-    height: 240px;
-    margin-bottom: 30px;
-}
-
-.dek67 img{
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    object-fit: contain;
-    transform: translateY(0);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 100%;
-    height: 100%;
-}
-
-.dek67 img:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
 
 footer{
     background-image: url('../resource/bg.jpg');
@@ -422,4 +399,106 @@ footer{
 }
 
 /* login */
+.login{
+    background-image: url("../resource/2floor-themath.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+}
 
+.head-login{
+    display: flex;
+    align-items: center;
+}
+
+.themath-log{
+    display: flex;
+    justify-content: flex-start;
+    width: 150px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.login-page{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    column-gap: 16px;
+}
+
+.border-login{
+    display: grid;
+    grid-column: 4 / span 6;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.login-reg{
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.login-reg h2{
+    font-family: "Kanit", serif;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.userpass-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.login-botton{
+    display: flex;
+    justify-content: center;
+    margin: 80px 0px 24px;
+}
+
+.login-botton button{
+    font-family: "Kanit", serif;
+    color: #838282;
+    background-color: white;
+    border:3px solid #838282;
+    width: 160px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.forgotpass{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forgotpass a{
+    font-family: "Kanit", serif;
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+.forgotpass a:hover{
+    color: black;
+}
+
+.regbutton{
+    text-align: center;
+}
+
+.regbutton a{
+    font-family: "Kanit", serif;
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+.regbutton a:hover{
+    color: black;
+}
