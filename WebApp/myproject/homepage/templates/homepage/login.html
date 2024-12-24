@@ -8,14 +8,40 @@
     <link rel="stylesheet" href="{% static 'payclass/css/style.css' %}">
 </head>
 <body>
-    <h2>Login</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-    <button type="submit">Login</button>
-    <h2>หากไม่มีบัญชี</h2>
-    <a href="{% url 'register' %}">register</a>
-</form>
+    <div class="login">
+        <header class="head-login">
+            <div class="themath-log">
+                <img  src="../static/payclass/resource/logo-themath.PNG" alt="">
+            </div>
+        </header>
+
+        <main class="login-page">
+            <div class="border-login">
+                <form method="post">
+                    <div class="login-reg">
+                        <h2>ลงชื่อเข้าใช้</h2>
+
+                        <div class="userpass-login">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        </div>
+                    
+                        <div class="login-botton">
+                            <button type="submit">เข้าสู่ระบบ</button>
+                        </div>
+
+                        <div class="forgotpass">
+                            <a href="#">ลืมรหัสผ่าน</a>
+                        </div>
+                
+                        <div class="regbutton">
+                            <a href="{% url 'register' %}">สร้างบัญชี</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
 
 </body>
 </html>
